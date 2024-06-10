@@ -1,0 +1,54 @@
+1st(a) HELLO+NAME
+
+
+--Mainactivity.java--
+
+
+package com.example.first;
+
+import android.os.Bundle;
+import android.widget.EditText;
+import android.widget.TextView;
+import androidx.activity.EdgeToEdge;
+import android.view.View;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+public class MainActivity extends AppCompatActivity {
+    private EditText barre;
+    private TextView bootham;
+    @Override    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        EditText e=findViewById(R.id.barre);
+        TextView t=findViewById(R.id.bootham);
+    }
+    public void showhellomessage(View view){
+String s=barre.getText().toString();
+if(!s.isEmpty()){
+    String msg="Hello ,"+s+"!";
+    bootham.setText(msg);
+}
+    }
+}
+
+
+--activity.xml--
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/bootham"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:layout_centerInParent="true"/>
+
+
